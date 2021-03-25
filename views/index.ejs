@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Index</title>
+</head>
+<body>
+		<% if (path) { %>
+			<h1>Displaying <%= path %></h1>
+		<% } else { %>
+			<h1>No directory selected</h1>
+		<% } %>
+		<% if (dirs)  { %>
+			<h2>Directories</h2>
+			<ul>
+				<% dirs.forEach(function(d) { %>
+					<li><%= d %></li>
+				<% }) %>
+			</ul>
+		<% } 
+		   if (files) { %>
+		   		<h2>Files</h2>
+		   		<ul>
+		   			<% files.forEach(function(f) { %>
+		   				<li><%= f %></li>
+		   			<% }) %>
+		   		</ul>
+		   <% }
+		%>
+		<h2>Choose directory to open</h2>
+		<form action="/" method="get">
+			<input type="text" id="path" name="path" />
+			<input type="submit" />
+		</form>
+</body>
+</html>
