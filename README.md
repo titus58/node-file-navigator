@@ -1,4 +1,4 @@
-# node-typescript-test
+# node-file-navigator
 
 This is a toy project for trying out Node.js with Typescript, EJS and Express.
 
